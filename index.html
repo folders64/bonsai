@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>proc.bonsai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg,
+                    rgba(25, 25, 25, 0.55),
+                    rgba(25, 25, 25, 0.15) 1px,
+                    transparent 1px,
+                    transparent 3px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        textarea {
+            font-family: monospace;
+            font-size: 11pt;
+            /*
+            background-color: #17181c;
+            color: #e8e7e3;
+            */
+            background-color: #000;
+            color: #fff;
+        }
+
+        a {
+            color: #cfcfcf;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output" contentEditable="true"
+        style="white-space: pre; font-family: monospace; height: 54em; width: 60em; overflow: auto;"></div>
+    <br>
+
+    Bonsai is in the public domain. <br>
+    Ctrl+U or Cmd+Option+U to view source.
+
+    <br><br>inspired by <a href="https://www.reddit.com/r/unixporn/comments/amdt7m/2bwm_cat/">u/enjuus' rice</a> <a
+        href="https://p.teknik.io/Raw/EWWzQ">[source code]</a>
+
+    <br><br>
+    Update: @jallbrit has ported bonsai to bash and C and added many features!
+    <br>
+    <a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a>
+    <br>
+    <a href="https://gitlab.com/jallbrit/cbonsai">cbonsai</a>
+    <script src="bonsai.js"></script>
+</body>
+
+</html>
